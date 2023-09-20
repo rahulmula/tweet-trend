@@ -1,6 +1,6 @@
 pipeline {
     agent {
-       label "webapp-slave"
+       label "build-server"
     }
     stages {
         stage('Build') {
