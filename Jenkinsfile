@@ -23,8 +23,7 @@ pipeline {
                 PATH="$M2_HOME/bin:$PATH"
                 export PATH
                 pwd
-                cd tweet-trend
-                mvn clean deploy -Dmaven.test.skip=true
+                cd tweet-trend; mvn clean deploy -Dmaven.test.skip=true
                 '''
                 echo 'Building....'
             }
