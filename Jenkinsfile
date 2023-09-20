@@ -5,6 +5,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
+                git 'https://github.com/rahulmula/tweet-trend.git'
                 echo 'Building..'
             }
         }
