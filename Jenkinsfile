@@ -5,7 +5,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                git branch: 'main', changelog: false, credentialsId: 'Github_cred', poll: false, url: 'https://github.com/rahulmula/tweet-trend.git'
+                git branch: 'main', credentialsId: 'Github_cred', url: 'https://github.com/rahulmula/tweet-trend.git'
                 echo 'Building..'
             }
         }
