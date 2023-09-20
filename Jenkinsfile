@@ -26,7 +26,7 @@ pipeline {
                 cd tweet-trend
                 mvn clean deploy -Dmaven.test.skip=true
                 '''
-                echo 'Building..'
+                echo 'Building...'
             }
         }
         stage('Test') {
