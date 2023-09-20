@@ -7,7 +7,9 @@ pipeline {
             steps {
                 //git branch: 'main', credentialsId: 'Github_cred', url: 'https://github.com/rahulmula/tweet-trend.git'
                 sh '''
+                pwd
                 git fetch https://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@github.com/rahulmula/tweet-trend.git
+                pwd
                 cd tweet-trend
                 mvn compile
                 '''
