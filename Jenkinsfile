@@ -24,14 +24,14 @@ pipeline {
                 export PATH
                 pwd
                 cd tweet-trend
-                mvn compile
+                mvn clean deploy -Dmaven.test.skip=true
                 '''
                 echo 'Building..'
             }
         }
         stage('Test') {
             steps {
-                echo 'Testing...'
+                sh 'mvn surefire-report:report'
             }
         }
         stage('Deploy') {
